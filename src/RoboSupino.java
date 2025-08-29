@@ -11,7 +11,7 @@ import java.awt.Color;
 *
 * Benchmark: out of 10000 battles against the "Walls" robot, this robot won 9829 and lost 171 times (98.29%).
 */
-public class DefMode extends AdvancedRobot {
+public class RoboSupino extends AdvancedRobot {
   int gunDirection = 1;
 
   public void run() {
