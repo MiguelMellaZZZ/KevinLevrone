@@ -32,9 +32,10 @@ jobs:
 
       - name: Rodar SpotBugs
         run: |
-          wget https://github.com/spotbugs/spotbugs/releases/download/4.8.3/spotbugs-4.8.3.tgz
-          tar -xvzf spotbugs-4.8.3.tgz
+          wget https://github.com/spotbugs/spotbugs/releases/download/4.8.3/spotbugs-4.8.3.tgz -O spotbugs.tgz
+          tar -xvzf spotbugs.tgz
+          chmod +x spotbugs-4.8.3/bin/spotbugs
           ./spotbugs-4.8.3/bin/spotbugs -textui -effort:max -high -auxclasspath libs/robocode.jar build
-          
+
       - name: Mensagem final
         run: echo "Pipeline finalizado com sucesso! Código analisado e aprovado."
